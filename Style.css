@@ -1,0 +1,690 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+/*========================= Global======================== */
+*{
+    /* To avoid default margin and padding */
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    background-size: cover;
+    font-family: sans-serif;
+    
+}
+
+/*============================== import Font  Style ...Dongle=======================*/
+
+@font-face{
+    font-family: "Dongle-light";
+    src: url("Dongle/Dongle-light.ttf");
+}
+@font-face{
+    font-family: "Dongle-regular";
+    src: url("Dongle/Dongle-regular.ttf");
+}
+@font-face{
+    font-family: "Dongle-bold";
+    src: url("Dongle/Dongle-bold.ttf");
+}
+
+
+/*======================================== Navbr================================ */
+
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: rgb(39, 22, 5);
+    padding: 10px;
+    justify-content: space-between;
+    display: flex;
+    font-size: medium;
+    background-color: #feb236;
+    box-shadow:0 0 10px black;
+    font-family: "Dongle-bold";
+    
+}
+
+.lg{
+    position: absolute;
+    height: 30px;
+    left: 10px;
+    width: 50px;
+}
+.navbar h1{
+    margin-left:60px;
+    font-size: 2rem;
+    font-family: "Poppins"sans-serif;
+    position: relative;
+    -webkit-text-stroke: 0.3vw #eba63f;
+    /* text-transform: uppercase; */
+}
+
+.navbar h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: rgb(39, 22, 5)b;
+    -webkit-text-stroke: 0vw rgb(39, 22, 5);
+    border-right: 2px solid rgb(39, 22, 5);
+    overflow: hidden;
+    animation: animates 6s linear infinite;
+}
+@keyframes animates{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%, 90%{
+        width:100%;
+    }
+}
+
+ul{
+    list-style: none;
+}
+
+.nav-links{
+    display: flex; 
+    align-items: center;
+    font-size: medium;
+    cursor: pointer;
+    font-family: "Dongle-bold";
+
+}
+.nav-links li{
+    margin: 0 30px;
+    color: rgb(39, 22, 5);
+    font-family: "Dongle-bold";
+    font-size: 1.3rem;
+    transition: all ease 0.3s;
+
+}
+
+.nav-links li:hover{
+    color: #fc036b;
+}
+
+
+.menu-btn{
+    top: 30px;
+    right: 30px;
+    position: absolute;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+/* 
+========================Horizonal scrolling stop =================*/
+body , html{
+    overflow-x: hidden;
+    
+}
+
+ /* ================================== Header ========================= */
+header{
+    height: 100vh;
+    width: auto;
+    background-image: url('./PariBack.jpg');
+    background-position: bottom;
+    background-size: cover;
+    display: flex; 
+    align-items: flex-end; 
+    justify-content: center; 
+}
+.header-content{
+    margin-bottom: 150px;
+    color: whitesmoke;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+
+.header-content h2{
+    font-size: 4vmin;
+}
+/* ==================== line betwine h1 and h2=================== */
+.line{
+    width: 150px;
+    height: 4px;
+    background:#fc036b;
+    margin: 10px auto;
+
+}
+/* For h1 */
+.header-content h1{
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.wrapper{
+    width: 400px;
+    max-width: 100%;
+    position: relative;
+
+ }
+ .wrapper input{
+    width: 100%;
+    background-color: #feb236;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    border: 2px solid white;
+ }
+  .wrapper button{
+    background-color: white;
+    border-radius: 50%;
+    height: 80%;
+    aspect-ratio:1 ;
+    position: absolute;
+    right: 0;
+    top: 10%;  
+    /* To attach */
+    transform: translateX(-10%);
+ }
+
+/*==============================  Button ======================`= */
+.ctn{
+    padding: 8px 15px;
+    background: #e06377;
+    border-radius: 30px;
+    color:white; 
+}
+
+.ctn:hover{
+    color: #eeac99;
+    background: #131118;
+}
+
+
+/* =============================== Upcoming Events ============================== */
+section{
+    width: 100%;
+    margin: 80px auto;
+    /* background-color: #feb236; */
+   
+}
+
+.title{
+    text-align: center;
+    font-size: 4vmin;
+    color: rgb(62, 62, 153);
+}
+.row{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between ;
+    margin-top: 40px;
+}
+.row .col{
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+}
+.row .col img{
+    width: 80%;
+    height: 80%;
+    margin-left: 80px;
+}
+
+h4{
+    font-size: 3vmin;
+    color: rgb(15, 15, 17);
+    margin: 20px auto;
+    text-align: center;
+   
+}
+.row .col a{
+    left: 50%;
+    margin-left: 40%;
+}
+
+p{
+    color: rgb(39, 22, 5);
+    padding: 0px 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+
+
+/*===================================  Slider ===================== */
+
+.slide-section h1{
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(62, 62, 153);
+    margin: 20px auto;
+}
+
+.slide-section .line{
+    margin-bottom: 3rem;
+}
+
+.slider
+{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+figure{
+    position: relative;
+    left: 0;
+    width: 400%;
+    animation: 10s slide infinite;
+
+}
+.slide{
+    position: relative;
+    width: 25%;
+    float: left;
+}
+.slide h1
+{
+    position: absolute;
+    font-size: 3em;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    color:rgb(39, 22, 5);
+    text-shadow: 1px 1px 2px black;
+}
+
+.slide img{
+    width: 100%;
+    height: 900px;
+    size: 100%;
+    margin-bottom: 200px;
+
+}
+
+@keyframes slide{
+    0%{
+        left: 0;
+    }
+    10%{
+        left: 0;
+    }
+    20%{
+        left:-100%;
+    }
+    40%{
+        left:-200%;
+    }
+    50%{
+        left:-200%;
+    }
+    55%{
+        left:-300%;
+    }
+    66%{
+        left:-200%;
+    }
+    75%{
+        left:-100%;
+    }
+    85%{
+        left:-100%;
+    }
+    90%{
+        left:-100%;
+    }
+    100%{
+        left:0;
+    }
+}
+
+
+/*===================================  Services ================================= */
+.services{
+    width: 80%;
+    margin: 90px auto;
+    font-size: 2vmin;
+    color: rgb(39, 22, 5);
+
+}
+.services h1{
+    text-align: center;
+    font-size: 4vmin;
+    color: rgb(62, 62, 153);
+    
+    
+}
+.services h2{
+        text-align: center;
+    color: rgb(39, 22, 5);
+    
+    
+}
+
+ .content-col p{
+  margin-top: 100px;
+}
+
+.services li{
+    color: rgb(15, 16, 15);
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+
+/*--================================ About...=======================================................ */
+
+.about{
+    background:  #eaece5;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    font-family: "Dongle-regular";
+/* In about section image class is... hence can write like this */
+
+.image{
+    flex:1 1 42rem;
+    padding-bottom: 5rem;
+    padding-right: 5rem;
+
+    img{
+        width: 100%;
+        height: 10%;
+        margin-top: 10px;
+        padding-left: 100px;
+        box-shadow: 4rem 4rem 0 #b2c2bf;
+        
+    }
+}
+.content{
+    flex: 1 1 42rem;
+    margin-left: 80px ;
+    
+
+    .line{
+        margin-bottom: 100px;
+    }
+
+    h2{
+        font-size: 3rem;
+        color: rgb(62, 62, 153);
+        text-align: center;
+    }
+
+    p{
+        font-size: 1.5rem;
+        color: black;
+        padding: 1rem 0;
+        line-height: 2;
+        
+    }
+
+    a{
+        margin-left: 40%;
+    }
+
+}
+
+}
+
+
+/* 
+============================ Tours or Services ============================= */
+.tours .row .col{
+    width: 50%;
+}
+.tours .image-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+.image-gallery img{
+    max-width: 300px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.5s;
+
+}
+.image-gallery img:hover{
+    transform: translateY(-10px);
+}
+.content-col{
+    width: 40%;
+}
+.image-col{
+    width: 60%;
+}
+.content-col h1{
+  font-size: 9vmin;
+}
+
+
+/* ===================================Footer============================ */
+
+footer{
+background: #3586ff no-repeat;
+background-position: center;
+ width: 100%;
+ min-height: 400px;
+ padding: 20px 50px;
+ align-items: center;
+ display: flex;
+ justify-content: center;
+ font-family: "Dongle-bold";
+ flex-direction: column;
+ position: relative;*
+    
+}
+
+footer .social_icons,
+footer .menu            
+{
+    color: #ddd7d7;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+footer .social_icons li,
+footer .menu li
+{
+    list-style: none;
+}
+
+footer .social_icons li  a
+{
+    font-size: 2rem;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .menu li a
+{
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+   opacity: 0.75;
+   text-decoration: none;
+   transition: 0.8s;
+}
+footer .menu li a:hover{
+    opacity: 1;
+    color: black;
+    transition: ease all;
+}
+
+footer .social_icons li a:hover{
+    transform: translateY(-10px);
+} 
+ 
+footer p{
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    font-size: 1.2rem;
+    font-family: "Dongle-bold";
+
+}
+footer p a{
+    color: #eaece5;
+    margin-right: 60px;
+    display: inline-block;
+    transition: 0.5s;
+    
+}
+footer p a i{
+    margin-right: 15px;
+}
+footer p a:hover{
+    color: #131118;
+    transform: translateY(-10px);
+}
+
+footer .wave
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(wave.jpg);
+    background-size: 1000px 100px;
+}
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animatewave1 4s linear infinite;
+
+}
+
+footer .wave#wave2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animatewave2 4s linear infinite;
+
+}
+
+footer .wave#wave3{
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animatewave1 3s linear infinite;
+
+}
+
+footer .wave#wave4{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animatewave2 3s linear infinite;
+
+}
+
+@keyframes animatewave1
+{
+    0%
+    {
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0px;
+    }
+}
+    
+@keyframes animatewave2
+{
+    0%
+    {
+        background-position-x: 0px;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+
+
+/*=================================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile device  */
+/* ...........To make navbar Responsive ...for mobile device */
+@media only screen and (max-width:850px)
+{
+    .navbar{
+        padding: 0; 
+    }
+    .menu-btn{
+        display: block;
+    }
+    .logo{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        height: 100vh;
+        width: 100wh;
+    }
+    .nav-links{
+        size: 100vmax;
+        flex-direction: column;   /* To arrange content in column */
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background-color: rgb(73, 73, 151);
+        margin-top: -900px;
+        transition: all 0.5s ease;   /* Menu scrren will apear from top */
+    }
+    .mobile-menu{
+        margin-top: 0px;
+        border-bottom-right-radius: 30%;
+    }
+    .nav-links li{
+        margin: 30px auto;
+
+    }
+
+    .row{
+        flex-direction: column;
+    }
+    .row .col{
+        margin: 20px auto;
+    }
+    .col img{
+        max-width: 90%;
+    }
+
+    html{
+        font-size: 55%;
+        scroll-padding-top: 7rem;
+    }
+}
